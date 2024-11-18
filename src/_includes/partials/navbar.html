@@ -45,7 +45,7 @@
                 {% for item in navigation.firstLevelItems %}
                   <li class="nav__item lg:relative group text-left">
                     
-                    {% if item.text == 'Home' %}
+                    {% if item.text == 'Home' or item.text == 'Contact' %}
                     
                       <a href="{{ item.url }}">
                         <span
