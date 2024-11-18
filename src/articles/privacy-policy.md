@@ -1,7 +1,7 @@
 ---
 title: Privacy policy
-seoTitle: Privacy policy | Anttz Chiropractic
-description: Cookie consent
+seoTitle: Privacy policy | Ewell Roofing
+description: Read Ewell Roofing's Privacy Policy to understand how we collect, use, and protect your personal information. Your privacy matters to us.
 author: David White
 date: 2024-02-29T17:13:10.382Z
 type: privacy
