@@ -1,4 +1,4 @@
-{% macro anchor(type, anchorText, destination, iconType, iconWidthHeight, iconSize, isExternal, classes, isPhone, dataTest, pointerEvents) %}
+{% macro anchor(type, anchorText, destination, iconType, iconWidthHeight, iconSize, isExternal, classes, isPhone, dataTest, pointerEvents, isEmail) %}
 
   {# Set primary as the default #}
   {% set typeClasses = 'bg-[color:var(--primary-color)] text-[color:var(--white)]' %}
@@ -42,18 +42,38 @@
           clip-rule="evenodd"
         />
       </svg>
+    {% elif iconType == 'email' %}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="{{ iconWidthHeight if iconWidthHeight else "24" }}px"
+        height="{{ iconWidthHeight if iconWidthHeight else "24" }}px"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="pl-1 {{ iconSize if iconSize else "size-6" }} pointer-events-none"">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
+        />
+      </svg>
     {% else %}
       
     {% endif %}
   {% endset %}
 
-  {% set phonePrefix = '' %}
+  {% set prefix = '' %}
   {% if isPhone == true %}
-    {% set phonePrefix = 'tel:' %}
+    {% set prefix = 'tel:' %}
+  {% endif %}
+
+  {% if isEmail == true %}
+    {% set prefix = 'mailto:' %}
   {% endif %}
 
   <a
-    href="{{ phonePrefix | safe }}{{ destination | safe }}" 
+    href="{{ prefix | safe }}{{ destination | safe }}" 
     {% if isExternal %}target="_blank"{% endif %}
     {% if isExternal %}rel="nofollow"{% endif %}
     {% if dataTest %}data-test="{{ dataTest }}"{% endif %}

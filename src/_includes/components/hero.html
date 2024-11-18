@@ -6,29 +6,29 @@
   <div class="max-w-6xl">
     <h1>{{ hero.title | safe }} <span class="text-[color:var(--primary-color)]">{{ hero.titleAccentText | safe }}</span></h1>
     <h2>{{ hero.subTitle | safe }}</h2>
-    <p class="mb-3">{{ hero.paragraphOne | safe }}</p>
-    <p class="mb-6">{{ hero.paragraphTwo | safe }}</p>
+    <p class="mb-6">{{ hero.paragraphOne | safe }}</p>
 
     {{ anchor.anchor(
         type='primary',
-        anchorText='Book an appointment',
-        destination='https://anttzchiro.neptune.practicehub.io/p/booking',
-        iconType='arrow',
-        isExternal=true,
+        anchorText='Call us',
+        destination=settings.phoneNumber,
+        iconType='phone',
+        isExternal=false,
         classes='mr-3',
-        isPhone=false
+        isPhone=true,
+        dataTest='callMeAnchor',
+        pointerEvents='pointer-events-none'
       )
     }}
 
     {{ anchor.anchor(
         type='secondary',
-        anchorText='Call me',
-        destination=settings.phoneNumber,
-        iconType='phone',
-        isExternal=false,
-        isPhone=true,
-        dataTest='callMeAnchor',
-        pointerEvents='pointer-events-none'
+        anchorText='Email us',
+        destination=settings.email,
+        iconType='email',
+        isExternal=true,
+        isPhone=false,
+        isEmail=true
       )
     }}
    
