@@ -52,11 +52,11 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["article", "privacy", "report", "faq"]
+        options: ["article", "privacy", "faq"]
         default: ["article"]
-  - label: "Landing page"
-    name: "landingPages"
-    folder: "src/landingPages"
+  - label: "Service"
+    name: "services"
+    folder: "src/services"
     create: true
     editor:
       preview: false
@@ -83,25 +83,7 @@ collections:
         pattern: ['^.{70,155}$', "Must be between 70 and 155 characters"]
       }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { 
-        label: "Sign up text",
-        name: "signUpText",
-        widget: "string",
-        hint: "*Text that appears at the top of the form*",
-      }
-      - { label: "Button text", name: "buttonText", widget: "string" }
-      - { label: "Form Image Title", name: "formImageTitle", widget: "string" }
-      - label: "Form image"
-        name: "formImage"
-        widget: "image"
-        choose_url: true
-        media_library:
-          config:
-            multiple: false
-        hint: "*624px x 716px*"
-      - { label: Form Image alternative text, name: imageAlt, widget: string }
   - label: "Settings"
     name: "settings"
     editor:

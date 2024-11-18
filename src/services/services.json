@@ -1,0 +1,8 @@
+{
+  "layout": "service",
+  "tags": [
+      "service"
+  ],
+  "ogType": "website",
+  "permalink": "/{{ title | slugify }}/"
+}
