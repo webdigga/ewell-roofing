@@ -287,8 +287,6 @@ collections:
         name: "banner"
         file: "src/_data/banner.yaml"
         fields:
-          - { label: Offer Text Part 1, name: offerTextPart1, widget: string }
-          - { label: Offer Text Part 2, name: offerTextPart2, widget: string }
           - { label: Anchor Text, name: anchorText, widget: string }
           - { label: Anchor Destination, name: anchorDestination, widget: string }
       - label: "FAQs"

@@ -97,10 +97,6 @@
       {% include "static/js/menuToggle/menuToggle.js" %}
     {% endset %}
 
-    {% set moreButtonScroll %}
-      {% include "static/js/moreButtonScroll/moreButtonScroll.js" %}
-    {% endset %}
-
     {% set callMeAnchorBehaviour %}
       {% include "static/js/callMeAnchorBehaviour/callMeAnchorBehaviour.js" %}
     {% endset %}
@@ -108,7 +104,6 @@
     <script type="module">
       {{ cookieConsent | jsmin | safe }}
       {{ menuToggle | jsmin | safe }}
-      {{ moreButtonScroll | jsmin | safe }}
       {{ callMeAnchorBehaviour | jsmin | safe }}
     </script>
   </body>

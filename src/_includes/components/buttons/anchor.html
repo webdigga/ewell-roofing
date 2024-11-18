@@ -1,10 +1,10 @@
 {% macro anchor(type, anchorText, destination, iconType, iconWidthHeight, iconSize, isExternal, classes, isPhone, dataTest, pointerEvents) %}
 
   {# Set primary as the default #}
-  {% set typeClasses = 'bg-[color:var(--dark-purple)] text-[color:var(--white)]' %}
+  {% set typeClasses = 'bg-[color:var(--primary-color)] text-[color:var(--white)]' %}
 
   {% if type == 'secondary' %}
-    {% set typeClasses = 'bg-[color:var(--light-green)] text-[color:var(--white)]' %}
+    {% set typeClasses = 'bg-[color:var(--secondary-color)] text-[color:var(--white)]' %}
   {% endif %}
 
   {% set icon %}

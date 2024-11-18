@@ -24,7 +24,10 @@ module.exports = {
             }
           },
         },
-      })
+      }),
+      backgroundImage: {
+        'hero-pattern': "linear-gradient(180deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0.2) 100%), url('./_includes/static/img/pexels-tirachard-kumtanom-112571-347152.webp')",
+     },
     },
   },
   variants: {},

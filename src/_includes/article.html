@@ -16,7 +16,7 @@ eleventyComputed:
 </section>
 
 <div class="border-b border-solid border-b-[color:var(--very-light-gray)]">
-  {{ navBar.nav(bgColour='bg-white') }}
+  {{ navBar.nav(bgColor='bg-[color:var(--white)] lg:bg-transparent') }}
 </div>
 
 <section class="container">
@@ -42,7 +42,7 @@ eleventyComputed:
 </section>
 
 {%if 'report' in tags %}
-  <section class="bg-[color:var(--dark-purple)]">
+  <section class="bg-[color:var(--primary-color)]">
     <div class="container">
       <div class="my-6 flex flex-col md:block prose max-w-5xl mx-auto prose-h2:text-white prose-p:text-white">
         {{ disclaimer.report() }}

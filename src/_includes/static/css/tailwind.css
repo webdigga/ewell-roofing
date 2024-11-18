@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 /*Your Custom CSS Goes here*/
-:root { 
-  --light-blue: #f5fbff;
-  --dark-purple: #3F0961;
+:root {
+  --primary-color: #019a31;
+  --secondary-color: #1a1a1a;
+  --light-blue: #f5fbff;  
   --light-purple: #7f0ea5;
-  --light-green: #006A4E;
   --white: #FFFFFF;
   --lightest-gray: #f9fafb;
   --very-light-gray: #dcdcdc;
@@ -76,11 +76,11 @@ h3, h4 {
 }
 
 .anchor-pop {
-  @apply underline-offset-4 decoration-2 underline decoration-[color:var(--dark-purple)];
+  @apply underline-offset-4 decoration-2 underline decoration-[color:var(--primary-color)];
 }
 
 .anchor-highlight {
-  @apply underline-offset-4 decoration-2 underline decoration-[color:var(--light-green)];
+  @apply underline-offset-4 decoration-2 underline decoration-[color:var(--secondary-color)];
 }
 
 .anchor-white {
